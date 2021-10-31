@@ -1,0 +1,26 @@
+@import '../../sass/build';
+
+.container {
+}
+
+.wrapper {
+    @include max-screen-sizes;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: 40rem;
+    padding: 4rem 2rem 0 2rem;
+}
+
+.salutation {
+ font-size: 2rem;
+ color: #7e7e7e;
+ text-align: left;
+ margin: 1rem 0 1rem 0;
+}
+
+.heading {
+    text-align: left;
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+}

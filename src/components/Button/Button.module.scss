@@ -1,0 +1,18 @@
+@import '../../sass/build';
+
+.btn {
+    font-size: 1.2rem;
+    border-radius: 35px;
+    padding: 1rem 4rem 1rem 4rem;
+    background-color: $black;
+    color: white;
+    text-decoration: none;
+    border: none;
+    max-width: 14rem;
+    min-height: 30px;
+    float: left;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

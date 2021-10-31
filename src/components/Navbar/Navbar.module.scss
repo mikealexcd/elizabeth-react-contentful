@@ -1,0 +1,34 @@
+@import '../../sass/build';
+
+.navigation {
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.navbar {
+    @include max-screen-sizes;
+    @include mx-auto;
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigation_links {
+    align-self: center;
+}
+
+.navlink {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: black;
+    font-family:'Poppins';
+    font-size: 1.3rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}

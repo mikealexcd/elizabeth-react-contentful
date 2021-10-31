@@ -1,0 +1,39 @@
+.card {
+  grid-column: span 1;
+  grid-row: span 2;
+//   max-width: 577px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 10px rgb(231 228 228 / 0.85);
+  border-radius: 15px;
+
+//   &:nth-of-type(odd) {
+//     margin-right: 10%;
+//   }
+
+//   &:nth-of-type(even) {
+//     margin-left: 10%;
+//   }
+
+  &_image {
+    max-width: 100%;
+  }
+
+  &_content {
+    border-radius: 0 0 15px 15px;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  &_title {
+    font-weight: 600;
+  }
+
+  &_description {
+  }
+
+  &_label {
+    font-weight: 200;
+    color: #7e7e7e;
+  }
+}

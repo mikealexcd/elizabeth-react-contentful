@@ -1,0 +1,85 @@
+@import '../../sass/build';
+
+$ns: 'testimonials';
+
+.#{$ns} {
+
+    &_container {
+        background-color: $light-grey;
+        justify-content: center;
+        display: flex;
+        padding: 2rem 0 4rem 0;
+    }
+
+    &_wrapper {
+        @include max-screen-sizes;
+        min-height: get-rem(563px);
+        max-height: get-rem(563px);
+    }
+
+    &_entry {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_quote{
+        font-size: 2rem;
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_title {
+        font-size: get-rem(70px);
+        font-weight: 500;
+        text-align: left;
+    }
+
+    &_image {
+        object-fit: cover;
+        max-height: get-rem(123px);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    &_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    &_person {
+        font-size: get-rem(35px);
+        font-weight: 500;
+        margin: 0 0 1rem 0;
+    }
+
+    &_role {
+        font-size: get-rem(35px);
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &_arrow {
+        font-size: get-rem(35px);
+        height: 100%;
+        align-self: center;
+        background-color: transparent;
+        border: transparent;
+    }
+    }
