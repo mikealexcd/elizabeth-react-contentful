@@ -10,32 +10,68 @@ $ns: 'testimonials';
         display: flex;
         padding: 2rem 0 4rem 0;
     }
-
-    &_wrapper {
+    
+    &_carousel {
         @include max-screen-sizes;
-        min-height: get-rem(563px);
-        max-height: get-rem(563px);
-    }
-
-    &_entry {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &_quote{
-        font-size: 2rem;
-    }
-
-    &_content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+    
+    &_wrapper {
+        // @include max-screen-sizes;
 
-    &_carousel {
+        @include media('>=tablet') {
+            min-height: get-rem(900px);
+            max-height: get-rem(900px);
+        }
+        @include media('>=desktop') {
+            min-height: get-rem(776px);
+            max-height: get-rem(776px);
+        }
+        @include media('>desktop-xxl') {
+            min-height: get-rem(650px);
+            max-height: get-rem(650px);
+        }
+        
+        min-height: get-rem(1024px);
+        max-height: get-rem(1024px);
+        margin: 0;
+        padding: 0 get-rem(58px);
+        overflow: hidden;
+    }
+    
+    &_entry {
+        @include media('>tablet') {
+            min-width: calc($tablet - get-rem(181px));
+            max-width: calc($tablet - get-rem(181px));
+        }
+        @include media('>desktop') {
+            min-width: calc($desktop - get-rem(181px));
+            max-width: calc($desktop - get-rem(181px));
+        }
+        @include media('>desktop-xl') {
+            min-width: calc($desktop-xl - get-rem(181px));
+            max-width: calc($desktop-xl - get-rem(181px));
+        }
+        @include media('>desktop-xxl') {
+            min-width: calc($desktop-xxl - get-rem(181px));
+            max-width: calc($desktop-xxl - get-rem(181px));
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &_quote {
+        font-size: 2rem;
+        line-height: get-rem(62px);
+        margin-bottom: get-rem(115px);
+    }
+    
+    &_content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
