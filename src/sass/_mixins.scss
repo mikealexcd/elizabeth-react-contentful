@@ -10,6 +10,9 @@
     @include media('>desktop-xl') {
         max-width: $desktop-xl;
     }
+    @include media('>desktop-xxl') {
+        max-width: $desktop-xxl;
+    }
 }
 
 @mixin mx-auto {
