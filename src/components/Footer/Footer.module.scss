@@ -1,0 +1,10 @@
+@import "../../sass/build";
+
+.footer {
+    min-height: get-rem(156px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: get-rem(25px);
+}
