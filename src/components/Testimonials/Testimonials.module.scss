@@ -25,6 +25,7 @@ $ns: 'testimonials';
         @include media('>=tablet') {
             min-height: get-rem(900px);
             max-height: get-rem(900px);
+            padding: 0 get-rem(58px);
         }
         @include media('>=desktop') {
             min-height: get-rem(776px);
@@ -35,11 +36,12 @@ $ns: 'testimonials';
             max-height: get-rem(650px);
         }
         
-        min-height: get-rem(1024px);
-        max-height: get-rem(1024px);
+        // min-height: get-rem(1024px);
+        // max-height: get-rem(1024px);
+        height: auto;
         margin: 0;
-        padding: 0 get-rem(58px);
         overflow: hidden;
+        // padding: 0 get-rem(32px);
     }
     
     &_entry {
@@ -59,16 +61,11 @@ $ns: 'testimonials';
             min-width: calc($desktop-xxl - get-rem(181px));
             max-width: calc($desktop-xxl - get-rem(181px));
         }
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    
-    &_quote {
-        font-size: 2rem;
-        line-height: get-rem(62px);
-        margin-bottom: get-rem(115px);
     }
     
     &_content {
@@ -78,8 +75,23 @@ $ns: 'testimonials';
         align-items: center;
     }
 
+    &_quote {
+        @include media (">=tablet") {
+            font-size: get-rem(32px);
+            line-height: get-rem(62px);
+        }
+
+        font-size: get-rem(24px);
+        line-height: get-rem(40px);
+        margin-bottom: get-rem(115px);
+    }
+
     &_title {
-        font-size: get-rem(70px);
+        @include media (">=tablet") {
+            font-size: get-rem(70px);
+        }
+
+        font-size: get-rem(32px);
         font-weight: 500;
         text-align: left;
     }
@@ -99,19 +111,28 @@ $ns: 'testimonials';
         margin-left: 2rem;
     }
 
+    &_person,
+    &_role {
+        @include media(">=tablet") {
+            font-size: get-rem(35px);
+        }
+    }
+
     &_person {
-        font-size: get-rem(35px);
         font-weight: 500;
         margin: 0 0 1rem 0;
     }
 
     &_role {
-        font-size: get-rem(35px);
         font-weight: 300;
         margin: 0;
     }
 
     &_arrow {
+        @include media ("<tablet") {
+            display: none;
+        }
+
         font-size: get-rem(35px);
         height: 100%;
         align-self: center;

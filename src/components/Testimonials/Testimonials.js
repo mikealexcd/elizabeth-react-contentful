@@ -7,6 +7,8 @@ function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const duration = 300;
 
@@ -81,8 +83,8 @@ function Testimonials() {
       <div>Loading</div>
     );
 
-  function handleClick() {
-    console.log(testimonials, testimonials.length, order);
+  function nextTestimonial() {
+    console.log("next",testimonials, testimonials.length, order);
     if (order < testimonials.length - 1) {
       setOrder(order + 1);
     } else {
@@ -90,19 +92,49 @@ function Testimonials() {
     }
   }
 
+  function previousTestimonial() {
+    console.log("previous",testimonials, testimonials.length, order);
+    if (order > 0) {
+      setOrder(order - 1);
+    } else {
+      setOrder(testimonials.length - 1);
+    }
+  }
+
+  function handleTouchStart(e) {
+    setTouchStart(e.targetTouches[0].clientX);
+}
+
+function handleTouchMove(e) {
+    setTouchEnd(e.targetTouches[0].clientX);
+}
+
+function handleTouchEnd() {
+    if (touchStart - touchEnd > 150) {
+        nextTestimonial();
+    }
+
+    if (touchStart - touchEnd < -150) {
+      previousTestimonial();
+    }
+    }
+
   return (
     <section className={styles.testimonials_container}>
       <div className={styles.testimonials_carousel}>
-        <button className={styles.testimonials_arrow} onClick={handleClick}>
+        <button className={styles.testimonials_arrow} onClick={previousTestimonial}>
           ◀
         </button>
         <div
           className={styles.testimonials_wrapper}
+          onTouchStart={touchStartEvent => handleTouchStart(touchStartEvent)}
+          onTouchMove={touchMoveEvent => handleTouchMove(touchMoveEvent)}
+          onTouchEnd={touchEndEvent => handleTouchEnd(touchEndEvent)}
         >
           <h2 className={styles.testimonials_title}>Testimonials</h2>
           {testimonialEntries}
         </div>
-        <button className={styles.testimonials_arrow} onClick={handleClick}>
+        <button className={styles.testimonials_arrow} onClick={nextTestimonial}>
           ▶
         </button>
       </div>
