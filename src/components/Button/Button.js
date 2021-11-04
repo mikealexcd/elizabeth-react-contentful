@@ -1,8 +1,9 @@
 import styles from "./Button.module.scss";
+import { Link } from "react-router-dom";
 
 function Button(props) {
     return (
-            <a className={styles.btn} href={props.link}>{props.children}</a>
+            <Link className={styles.btn} to={props.link}>{props.children}</Link>
     )
 }
 
