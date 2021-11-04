@@ -1,0 +1,128 @@
+@import "../../sass/build";
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  @include max-screen-sizes;
+  @include media(">=tablet") {
+    flex-direction: row;
+    margin-top: get-rem(141px);
+    align-items: flex-start;
+  }
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  @include media(">=tablet") {
+    &:nth-child(1){
+      align-items: flex-start;
+    }
+    &:nth-child(2){
+      align-items: center;
+    }
+    
+    padding: get-rem(32px);
+    width: 50%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.heading,
+.text {
+  @include media(">=tablet") {
+    max-width: 90%;
+    text-align: left;
+  }
+
+  // margin: 0;
+}
+
+.heading {
+  @include media (">=tablet") {
+    font-size: get-rem(30px);
+  }
+
+  font-size: get-rem(30px);
+  font-weight: 300;
+}
+
+.text {
+  @include media (">=tablet") {
+    font-size: get-rem(45px);
+  }
+  
+  font-weight: 700;
+}
+
+.form {
+  @include media(">=desktop") {
+    // margin: get-rem(60px);
+  }
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 80%;
+
+}
+
+.email,
+.message {
+  @include media(">=tablet") {
+    padding: get-rem(10px) get-rem(30px);
+    font-size: get-rem(20px);
+    max-width: 90%;
+    margin: 0;
+  }
+
+  border-radius: 10px;
+  border-color: #979797;
+  border-style: solid;
+  border-width: 0.3px;
+  box-shadow: 2px 4px 4px rgb(238 238 238 / 40%);
+  min-width: 100%;
+  padding: get-rem(10px) get-rem(30px);
+}
+
+.email {
+  @include mx-auto;
+  min-height: get-rem(70px);
+  margin-bottom: get-rem(30px);
+}
+
+.message {
+  min-height: get-rem(205px);
+  margin-bottom: get-rem(44px);
+}
+
+.submit {
+  background-color: $black;
+  border: 0;
+  color: #fff;
+  font-size: get-rem(20px);
+  padding: get-rem(16px) get-rem(92px);
+  max-width: 50%;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    opacity: 50%;
+    text-decoration: underline;
+  }
+}
