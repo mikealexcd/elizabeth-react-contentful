@@ -1,19 +1,26 @@
+@import "../../sass/build";
+
 .card {
   grid-column: span 1;
   grid-row: span 2;
-//   max-width: 577px;
+  //   max-width: 577px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 10px rgb(231 228 228 / 0.85);
   border-radius: 15px;
+  margin-bottom: get-rem(50px);
 
-//   &:nth-of-type(odd) {
-//     margin-right: 10%;
-//   }
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-//   &:nth-of-type(even) {
-//     margin-left: 10%;
-//   }
+  //   &:nth-of-type(odd) {
+  //     margin-right: 10%;
+  //   }
+
+  //   &:nth-of-type(even) {
+  //     margin-left: 10%;
+  //   }
 
   &_image {
     max-width: 100%;
