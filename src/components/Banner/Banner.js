@@ -22,12 +22,14 @@ function Banner() {
     , []);
 
     return (
-        <section className="wrapper">
-            <p className="salutation">{salutation}</p>
-            <h1 className="heading">{heading} <br />
-            {about}
-            </h1>
-            <Button link="#contact">About Me</Button>
+        <section className="banner_container">
+            <div class="banner_wrapper">
+                <p className="banner_salutation">{salutation}</p>
+                <h1 className="banner_heading">{heading} <br />
+                {about}
+                </h1>
+                <Button link="#contact">About Me</Button>
+            </div>
         </section>
     );
 }
