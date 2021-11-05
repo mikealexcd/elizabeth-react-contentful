@@ -1,18 +1,31 @@
-@import '../../sass/build';
+@import "../../sass/build";
 
 .btn {
-    font-size: 1.2rem;
-    border-radius: 35px;
-    padding: 1rem 4rem 1rem 4rem;
-    background-color: $black;
-    color: white;
-    text-decoration: none;
-    border: none;
-    max-width: 14rem;
-    min-height: 30px;
+  @include mx-auto;
+  @include media(">=tablet") {
+    font-size: get-rem(25px);
+    text-align: left;
+    padding: get-rem(16px) get-rem(78px);
+    max-width: get-rem(280px);
+    min-height: get-rem(70px);
+    margin-bottom: get-rem(213px);
     float: left;
+  }
 
-    &:hover {
-        text-decoration: underline;
-    }
+  font-size: get-rem(16px);
+  border-radius: 30px;
+  padding: get-rem(8px) get-rem(38px);
+  max-width: get-rem(157px);
+  min-height: get-rem(40px);
+  margin-bottom: get-rem(119px);
+  background-color: $black;
+  color: white;
+  text-decoration: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,14 +1,17 @@
 @import "../../sass/build";
 
 .card {
+  @include media("<tablet"){
+    margin-bottom: get-rem(50px);
+  }
+
   grid-column: span 1;
   grid-row: span 2;
-  //   max-width: 577px;
+  max-width: 577px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 10px rgb(231 228 228 / 0.85);
   border-radius: 15px;
-  margin-bottom: get-rem(50px);
 
   &:last-child {
     margin-bottom: 0;
@@ -27,20 +30,45 @@
   }
 
   &_content {
+    @include media(">=tablet") {
+      padding: get-rem(40px);
+    }
+    
+    padding: get-rem(26px);
     border-radius: 0 0 15px 15px;
     text-align: left;
-    padding: 2rem;
+  }
+
+  &_title,
+  &_description {
+    margin: 0 0 get-rem(20px);
   }
 
   &_title {
-    font-weight: 600;
+    @include media(">=tablet") {
+      font-size: get-rem(40px);
+    }
+    font-size: get-rem(30px);
+    font-weight: 500;
   }
 
   &_description {
+    @include media(">=tablet") {
+      font-size: get-rem(25px);
+      line-height: get-rem(40px);
+    }
+
+    line-height: get-rem(26.5px);
+    font-size: get-rem(16px);
   }
 
   &_label {
+    @include media(">=tablet") {
+      font-size: get-rem(20px);
+    }
+    font-size: get-rem(16px);
     font-weight: 200;
     color: #7e7e7e;
+    margin: 0;
   }
 }

@@ -23,7 +23,7 @@ function Banner() {
 
     return (
         <section className="banner_container">
-            <div class="banner_wrapper">
+            <div className="banner_wrapper">
                 <p className="banner_salutation">{salutation}</p>
                 <h1 className="banner_heading">{heading} <br />
                 {about}

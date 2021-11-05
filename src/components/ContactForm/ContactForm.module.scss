@@ -9,8 +9,13 @@
   @include max-screen-sizes;
   @include media(">=tablet") {
     flex-direction: row;
-    margin-top: get-rem(141px);
+    margin-top: get-rem(70px);
     align-items: flex-start;
+    gap: 6%;
+  }
+  @include media(">=desktop") {
+    margin: get-rem(126px) 0;
+    padding: 0 get-rem(103px);
   }
 
   display: flex;
@@ -18,24 +23,25 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: get-rem(35px);
 }
 
 .column {
   @include media(">=tablet") {
     &:nth-child(1){
+      justify-content: flex-start;
       align-items: flex-start;
     }
     &:nth-child(2){
       align-items: center;
     }
     
-    padding: get-rem(32px);
-    width: 50%;
+    // padding: get-rem(32px);
+    flex-basis: 47%;
   }
 
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
 
 }
@@ -43,60 +49,61 @@
 .heading,
 .text {
   @include media(">=tablet") {
-    max-width: 90%;
     text-align: left;
   }
-
-  // margin: 0;
 }
 
 .heading {
-  @include media (">=tablet") {
+  @include media (">=desktop") {
     font-size: get-rem(30px);
   }
 
   font-size: get-rem(30px);
   font-weight: 300;
+  color: $heading-grey;
+  margin: 0;
 }
 
 .text {
-  @include media (">=tablet") {
+  @include media (">=desktop") {
     font-size: get-rem(45px);
   }
-  
+
+  font-size: get-rem(24px);
   font-weight: 700;
 }
 
 .form {
   @include media(">=desktop") {
-    // margin: get-rem(60px);
+    padding-right: get-rem(30px);
   }
 
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  flex-basis: 100%;
   justify-content: center;
   align-items: center;
-  min-width: 80%;
 
 }
 
 .email,
 .message {
-  @include media(">=tablet") {
+  @include media(">=desktop") {
     padding: get-rem(10px) get-rem(30px);
-    font-size: get-rem(20px);
-    max-width: 90%;
+    font-size: get-rem(25px);
     margin: 0;
   }
-
+  
   border-radius: 10px;
-  border-color: #979797;
+  border-color: $light-grey;
   border-style: solid;
   border-width: 0.3px;
   box-shadow: 2px 4px 4px rgb(238 238 238 / 40%);
   min-width: 100%;
   padding: get-rem(10px) get-rem(30px);
+  color: $light-grey;
+  font-weight: 200;
+  --webkit-font-smoothing: anti-aliased;
 }
 
 .email {

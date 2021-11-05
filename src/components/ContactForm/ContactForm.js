@@ -4,7 +4,7 @@ function ContactForm() {
 
     return (
         
-        <div className={styles.container}>
+        <div className={styles.container} id="contact">
             <div className={styles.wrapper}>
                 <div className={styles.column}>
                     <h2 className={styles.heading}>Would you like to reach out?</h2>

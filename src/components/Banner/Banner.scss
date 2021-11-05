@@ -16,23 +16,34 @@ $ns: 'banner';
         flex-direction: column;
         height: auto;
         text-align: justify;
-        margin-bottom: get-rem(32px);
+        padding: get-rem(93px) get-rem(32px) 0;
     }
-
-    height: 40rem;
-    padding: 4rem 2rem 0 2rem;
+    
+    height: auto;
+    padding: get-rem(174px) 0 0;
 }
 
 &_salutation {
- font-size: 2rem;
- color: #7e7e7e;
- text-align: left;
+    @include media( ">=tablet") {
+        font-size: get-rem(30px);
+        text-align: left;
+    }
+
+ font-size: get-rem(14px);
+ text-align: center;
+ color: $heading-grey;
  margin: 1rem 0 1rem 0;
+ font-weight: 300;
 }
 
 &_heading {
-    text-align: left;
-    font-size: 2.5rem;
+    @include media( ">=tablet") {
+        font-size: get-rem(50px);
+        text-align: left;
+    }
+    font-size: get-rem(16px);
+    font-weight: 500;
+    text-align: center;
     margin: 0 0 2rem 0;
 }
 }

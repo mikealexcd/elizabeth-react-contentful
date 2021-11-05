@@ -15,28 +15,32 @@ $ns: 'cards';
             @include max-screen-sizes;
             @include media(">=tablet") { 
                 display: grid;
-                gap: 4rem 4rem;
+                gap: get-rem(60px) get-rem(60px);
                 grid-template-columns: repeat(2, 1fr);
                 grid-auto-flow: dense;
-                padding: 7rem 0;
+                padding: get-rem(122px) 0 get-rem(69px);
                 
             }
 
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-flow: row wrap;
             align-items: center;
-            padding: 1rem;
-            margin-bottom: get-rem(32px);
-            max-width: 100%;
+            padding: get-rem(35px);
+            flex-basis: 100%;
     }
     
     &_title {
         @include media(">=tablet") {
-            font-size: 5rem;
+            font-size: get-rem(70px);
+            line-height: get-rem(75px);
+            margin: 0;
         }
         
-        grid-column: 1 / 2;
+        font-size: get-rem(30px);
+        line-height: get-rem(32.5px);
+        align-self: flex-start;
+        text-align: left;
+        font-weight: 500;
+        margin-bottom: get-rem(50px);
     }
 }

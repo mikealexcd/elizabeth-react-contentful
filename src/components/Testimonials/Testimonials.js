@@ -123,7 +123,10 @@ function handleTouchEnd() {
     <section className={styles.testimonials_container}>
       <div className={styles.testimonials_carousel}>
         <button className={styles.testimonials_arrow} onClick={previousTestimonial}>
-          ◀
+        <svg width="43" height="68" viewBox="0 0 43 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.1675 67.5L42.04 59.6275L16.4684 34L42.04 8.3725L34.1675 0.5L0.667545 34L34.1675 67.5Z" fill="#878787" fill-opacity="0.5"/>
+</svg>
+
         </button>
         <div
           className={styles.testimonials_wrapper}
@@ -135,7 +138,10 @@ function handleTouchEnd() {
           {testimonialEntries}
         </div>
         <button className={styles.testimonials_arrow} onClick={nextTestimonial}>
-          ▶
+        <svg width="43" height="68" viewBox="0 0 43 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.83246 0.5L0.959961 8.3725L26.5316 34L0.959961 59.6275L8.83246 67.5L42.3325 34L8.83246 0.5Z" fill="#878787" fill-opacity="0.5"/>
+</svg>
+
         </button>
       </div>
     </section>
